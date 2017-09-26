@@ -1,0 +1,19 @@
+#!/bin/sh /etc/rc.common
+ 
+START=100
+STOP=100
+ 
+start() {        
+        TCPPORT='32000'
+		PWDCNTFILE='/sys/class/leds/tp-link:blue:relay/brightness'
+		DEBUGFLAG='0'
+		
+        # commands to launch application
+		/usr/MyKankunTCPSrv/knkonoffsrv $TCPPORT $PWDCNTFILE $DEBUGFLAG &
+}                 
+ 
+stop() {          
+        echo stop
+        # commands to kill application 
+		killall "knkonoffsrv"
+}

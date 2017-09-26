@@ -1,0 +1,2 @@
+[gciutac bin]$ md5sum knkonoffsrv
+84656dd657f15585b35a85b9333b9dad  knkonoffsrv
